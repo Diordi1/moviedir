@@ -1,0 +1,21 @@
+<p>Weather Search</p>
+<form >
+    <input type="text" name="cityText" placeholder="Enter the city" [(ngModel)]="city1" required minlength="3" #checkCity="ngModel">
+    {{checkCity.errors|json}}
+    <input type="submit" name="sub" (click)="enter1()"class="btn btn-primary" [disabled]="checkCity.errors">
+
+</form>
+        {{city1|json}}
+        {{data|json}}
+        {{locationData?.location?.name|json}}
+        {{locationData?.location?.region|json}}
+        {{locationData?.location?.country|json}}
+        {{locationData?.location?.lat|json}}
+        {{locationData?.location?.lon|json}}
+        {{locationData?.current?.wind_mph|json}}
+        {{locationData?.current?.wind_dir|json}}
+
+        <div class="dis">
+            
+        </div>
+        <!-- {{formCheck.errors|json}} -->

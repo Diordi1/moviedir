@@ -1,0 +1,23 @@
+<div class="night">
+
+    <header><h1>NightOwl <span>Binge</span></h1></header>
+<div class="img"><img src="assets/te1.jpg" alt="img" width="200px"></div>
+
+<input type="text" required [(ngModel)]="name1" size="25" line-height="10em" minlength="2" width="200px" #us="ngModel" class="rounded"  placeholder="search Title/Imdb Id" >
+{{us.errors|json}}
+{{name1}}
+<div class="type">
+    <span>Type:</span>
+   <span id="l13"> </span>
+    <!-- <input type="button" value="Webseries" class="btn  btn-primary t1" > -->
+    <button class="btn  btn-primary t1" (click)="tog1()">{{type1}}</button>
+    </div>
+<div class="size">
+    <span>Result</span><span id="l14"></span>
+    <input type="button" value="+" class="btn  btn-primary rounded-circle t2" (click)="siz('-')" >
+    <p id="t1" name="c1">{{var1}}</p>
+    <input type="button" value="+" class="btn  btn-primary rounded-circle t12" (click)="siz('+')">
+</div>
+<input type="button" value="submit"  class="btn btn-primary"[disabled]="us.errors" (click)="temp()">
+{{das?.[0]?.adult|json}}
+</div>

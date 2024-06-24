@@ -1,0 +1,13 @@
+<p>pnr works!</p>
+<form>
+    <div class="enter">
+
+        <input type="text"  class="form-control"  name="pnrData" [(ngModel)]="pnrData.pnr" #checkd="ngModel"  >
+    {{checkd.errors|json}}
+
+{{pnrData.pnr|json}}
+
+</div>
+<input type="button" name="entBtn" placeholder="Submit" class="btn btn-success" value="submit" (click)="checkPnr()">
+</form>
+{{temp?.typeMatches?.[0]|json}}
